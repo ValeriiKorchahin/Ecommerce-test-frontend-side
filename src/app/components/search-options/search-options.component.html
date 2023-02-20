@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <mat-card-content>
+    <p class="title">Categories</p>
+    <mat-button-toggle-group class="categories-group">
+      <mat-button-toggle class="button"
+                         (click)="selectCategory(category.id)"
+                         *ngFor="let category of categories"
+                         [value]="category.id">
+        {{category.categoryName}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-card-content>
+</div>

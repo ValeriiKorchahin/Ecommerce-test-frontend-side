@@ -1,0 +1,22 @@
+.wrapper {
+  width: 400px;
+  background-color: #302f37;
+  color: white;
+  .title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .categories-group {
+    display: flex;
+    flex-direction: column;
+
+    .button {
+      font-size: 20px;
+    }
+
+    .button, .title {
+      color: #302f37;
+    }
+  }
+}

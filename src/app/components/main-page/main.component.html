@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="wrapper">
+  <app-search-options (categorySelect)="findItemsByCategory($event)"></app-search-options>
+  <div class="item-template">
+    <div class="items">
+      <app-item *ngFor="let item of items.data | paginate: {
+      itemsPerPage: items.pageSize,
+      currentPage: page,
+      totalItems: totalItems
+      }"
+                [item]="item"></app-item>
+    </div>
+    <pagination-controls (pageChange)="renderPage($event)"></pagination-controls>
+  </div>
+</div>

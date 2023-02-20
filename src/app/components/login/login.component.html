@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <mat-card class="container">
+    <mat-card-content class="content">
+      <p class="title">Login</p>
+      <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+        <div>
+          <mat-form-field class="control-field" appearance="outline">
+            <mat-label>Login</mat-label>
+            <input matInput type="text" placeholder="Login" formControlName="email">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="control-field" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="text" placeholder="Password" formControlName="password">
+          </mat-form-field>
+        </div>
+        <div class="button">
+          <button [disabled]="loginForm.touched && loginForm.invalid" mat-raised-button color="primary">Login
+          </button>
+        </div>
+      </form>
+      <p class="hint">Do not have an account?</p>
+      <a routerLink="">Register</a>
+    </mat-card-content>
+  </mat-card>
+</div>
