@@ -16,7 +16,7 @@ export class ItemService {
     return this.httpClient.get<IPaginatedItems>('https://localhost:7291/api/' + 'Item' + '?currentPageNumber=' + pageNumber + '&pageSize=' + 6);
   }
 
-  getItemsByCategory(id: number): Observable<IPaginatedItems>{
-    return this.httpClient.get<IPaginatedItems>('https://localhost:7291/api/ItemByCategory/' + id + '?currentPageNumber=' + 1 + '&pageSize=' + 6)
+  getItemsByCategory(id: number): Observable<IPaginatedItems> {
+    return this.httpClient.get<IPaginatedItems>('https://localhost:7291/api/ItemByCategory/' + id + '?currentPageNumber=' + 1 + '&pageSize=' + 6);
   }
 }
